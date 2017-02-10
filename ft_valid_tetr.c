@@ -1,41 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_valid_tetr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pacnijim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/18 13:53:41 by pacnijim          #+#    #+#             */
-/*   Updated: 2017/02/10 04:29:16 by pacnijim         ###   ########.fr       */
+/*   Created: 2017/02/09 22:20:49 by pacnijim          #+#    #+#             */
+/*   Updated: 2017/02/10 00:56:37 by pacnijim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib_fillit.h"
 
-static int		ft_len(char *s)
+int			ft_valid_tetr(t_list *tetr, int i)
 {
-	int			i;
+	(void)i;
+	(void)tetr;
+	/*int		j;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-static char		*ft_cpy(char *dest, char *src)
-{
-	while (*src != '\0')
-		*(dest++) = *(src++);
-	*dest = '\0';
-	return (dest);
-}
-
-char			*ft_strdup(char *src)
-{
-	char		*dest;
-
-	if ((dest = (char *)malloc(sizeof(char) * (ft_len(src) + 1))) == NULL)
-		return (NULL);
-	ft_cpy(dest, src);
-	return (dest);
+	while (tetr->tab[i])
+	{
+		j = 0;
+		if (tetr->tab[i + j] == '#')
+			i++;
+		while (tetr->tab[i + j] != '#')
+		{
+			DEB
+			ft_putnbr(j);
+			ft_putchar('\n');
+			j++;
+			if (j > 4)
+				return (1);
+		}
+		i = i + j;
+	}*/
+	return (0);
 }

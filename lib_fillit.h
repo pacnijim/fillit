@@ -6,7 +6,7 @@
 /*   By: pacnijim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/28 03:56:26 by pacnijim          #+#    #+#             */
-/*   Updated: 2017/02/08 20:34:01 by pacnijim         ###   ########.fr       */
+/*   Updated: 2017/02/10 09:14:53 by pacnijim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,12 @@ void				ft_putnbr(int nb);
 void				*ft_memalloc(size_t size);
 void				ft_bzero(void *s, size_t n);
 char				*ft_mktab(int fd);
-char				*ft_strdup(char *dest, char *src);
-char				*ft_strsub(char *str, size_t start, size_t len, size_t t_len);
+char				*ft_strdup(char *src);
+char				*ft_strsub(char *str, size_t ttart, size_t len, size_t t_len);
+int					ft_strstr(const char *str, const char *to_find);
 int					ft_check_map(const char *s);
 int					ft_check_map2(t_list *map);
+int					ft_test_form(t_list *tetr);
 int					ft_test_form(t_list *tetrimino);
 t_list				*ft_mklist(char *str);
 

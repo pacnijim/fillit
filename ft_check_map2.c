@@ -6,22 +6,18 @@
 /*   By: pacnijim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/28 07:36:14 by pacnijim          #+#    #+#             */
-/*   Updated: 2017/02/08 20:34:03 by pacnijim         ###   ########.fr       */
+/*   Updated: 2017/02/10 18:52:40 by pacnijim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib_fillit.h"
 
-static int		ft_test_tetr(t_list *tetrimino)
+/*static int		ft_test_tetr(t_list *tetrimino)
 {
-	size_t		i;
-
-	i = 0;
-	if (ft_test_line(tetrimino) == 1)
-		i = 1;
-	ft_putnbr(i);
+	if (ft_test_form(tetrimino) != 0)
+		return (1);
 	return (0);
-}
+}*/
 
 static int		ft_tetrimino(t_list *tetrimino)
 {
@@ -35,9 +31,9 @@ static int		ft_tetrimino(t_list *tetrimino)
 			tetrimino->pts[j++] = i;
 	if (j != 4)
 		return (1);
-	if (ft_test_tetr(tetrimino) == 1)
-		return (1);
-	return (0);
+	if (ft_test_form(tetrimino) == 0)
+		return (0);
+	return (1);
 }
 
 static void			ft_print_tab(int *t)
