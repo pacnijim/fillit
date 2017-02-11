@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_map.c                                     :+:      :+:    :+:   */
+/*   debug.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pacnijim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/28 07:36:14 by pacnijim          #+#    #+#             */
-/*   Updated: 2017/02/11 06:19:09 by pacnijim         ###   ########.fr       */
+/*   Created: 2017/02/11 03:31:24 by pacnijim          #+#    #+#             */
+/*   Updated: 2017/02/11 04:09:23 by pacnijim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib_fillit.h"
 
-static int		ft_tetrimino(t_list *tetrimino)
+static void		ft_print_points(int *pts)
 {
-	size_t		i;
-	size_t		j;
+	size_t	i;
 
 	i = 0;
-	j = 0;
-	while (tetrimino->tab[i++])
-		if (tetrimino->tab[i] == '#')
-			tetrimino->pts[j++] = i;
-	if (j != 4)
-		return (1);
-	if (ft_test_form(tetrimino) == 0)
-		return (0);
-	return (1);
+	while (i < 4)
+	{
+		ft_putnbr(pts[i]);
+		ft_putstr(" | ");
+		i++;
+	}
+	ft_putchar('\n');
 }
 
-int				ft_check_map2(t_list *map)
+void			debug(t_list *lst)
 {
-	while (map != NULL)
+	while (lst != NULL)
 	{
-		if (ft_tetrimino(map) == 1)
-			return (1);
-		map = map->next;
+		ft_print_points(lst->pts);
+		lst = lst->next;
 	}
-	return (0);
 }

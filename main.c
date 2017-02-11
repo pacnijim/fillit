@@ -6,7 +6,7 @@
 /*   By: pacnijim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/28 03:29:06 by pacnijim          #+#    #+#             */
-/*   Updated: 2017/02/06 19:18:58 by pacnijim         ###   ########.fr       */
+/*   Updated: 2017/02/11 05:47:05 by pacnijim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ int			main(int ac, char **av)
 		if (ft_error_map() == 0)
 			return (1);
 	map = ft_mklist(str);
+	free(str);
 	if (ft_check_map2(map) == 1)
 		if (ft_error_map() == 0)
 			return (1);
+	debug(map);
 	return (0);
 }

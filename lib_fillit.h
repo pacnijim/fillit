@@ -6,7 +6,7 @@
 /*   By: pacnijim <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/28 03:56:26 by pacnijim          #+#    #+#             */
-/*   Updated: 2017/02/10 09:14:53 by pacnijim         ###   ########.fr       */
+/*   Updated: 2017/02/11 14:41:16 by pacnijim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <fcntl.h>
 # include <stdlib.h>
 
-# define DEB ft_putstr("----------deb-----------\n");
+# define DEB ft_putstr
 
 typedef struct		s_list
 {
@@ -46,5 +46,8 @@ int					ft_check_map2(t_list *map);
 int					ft_test_form(t_list *tetr);
 int					ft_test_form(t_list *tetrimino);
 t_list				*ft_mklist(char *str);
+
+
+void				debug(t_list *lst);
 
 #endif
